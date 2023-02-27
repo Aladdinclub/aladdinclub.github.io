@@ -1,0 +1,399 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.grid-container {
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #000000;
+
+  width: 100%;
+}
+
+
+.social-icon , .logo, .translate {
+  display: flex;
+
+  justify-content: center;
+  padding: 1rem 0rem;
+}
+
+.social-icon
+{
+  justify-content: center;
+}
+
+.logo {
+  flex: 1;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: flex-start; /* new */
+}
+
+.translate {
+  flex: 0.5;
+}
+
+ul.social-media-list img {
+  width: 25px;
+  height: 25px;
+}
+
+ul.social-media-list {
+
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+ul.social-media-list li {
+  display: inline-block;
+}
+
+.slots-contacts {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 10px;
+  padding: 1.5rem 0rem 0rem 0rem; 
+}
+
+.slots-contacts > a:nth-child(1)  {
+  display: flex;
+  display:-webkit-flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: flex-start; /* new */
+}
+
+.slots-contacts > a:nth-child(2)  {
+  display: flex;
+  display:-webkit-flex;
+  flex: 1;
+  align-items: flex-start; /* new */
+}
+
+.slots-contacts > a:nth-child(2)  {
+  display: flex;
+  display:-webkit-flex;
+  flex: 1;
+  align-items: flex-start; /* new */
+  justify-content: center;
+}
+
+
+.slots-contacts img {
+  max-width: 90%;
+}
+
+
+
+.select-text {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 4.3vw;
+}
+
+
+
+
+.contact-lists {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(8rem, 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: 10px;
+  padding: 0rem 0.25rem;
+  
+}
+
+.contact-lists::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.contact-lists > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+/* Just to make the grid visible */
+
+.contact-lists > * {
+  /* background: rgb(52, 56, 2);
+  border: 1px white solid; */
+  
+}
+
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+}
+
+.border-gradient-purple {
+  border-image-source: linear-gradient(180deg, rgba(255,209,122,1) 33%, rgba(147,118,32,1) 57%, rgba(255,209,122,1) 71%)
+}
+
+.contact-lists-item {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: relative;
+  padding: 0.3rem;
+
+}
+
+.round{
+  width: 45%;
+  top: 45%;  /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  border: 10px solid red;
+}
+
+
+.description {
+  display: flex;
+}
+.w-100 {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.description > .img {
+  width: 30%;
+}
+
+.name-card {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1fr;
+  grid-template-rows:  repeat(2,minmax(0,auto));
+  width: 100%;
+  grid-template-areas: 
+    "qr . ."
+    "logo detail detail";
+
+}
+
+.card-qr {
+  grid-area: qr;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+}
+
+.card-logo {
+  grid-area: logo;
+  display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.name-details {
+  grid-area: detail;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  padding-top: 0.5rem;
+
+
+}
+
+.name-card-detail{
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 1.5fr;
+  width : 100%;
+  align-items: self-end;
+}
+
+.name-card-detail > i {
+  font-size: 2.5vw;
+}
+
+
+.text-gradient {
+  display: inline-block;
+
+  flex: 1;
+  white-space: nowrap
+}
+
+@supports ((background-clip: text) or (-webkit-background-clip: text)) and
+  ((text-fill-color: transparent) or (-webkit-text-fill-color: transparent)) {
+  .text-gradient {
+    background: linear-gradient(180deg, rgba(255,209,122,1) 33%, rgba(147,118,32,1) 57%, rgba(255,209,122,1) 71%);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    margin: 0;
+    font-size: 2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+
+
+.description > .all-contact {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 0.70rem;
+  padding: 0.6rem 0rem;
+}
+
+.all-contact > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+
+.custom-img .contact-logo {
+  display: flex;
+}
+
+.contact-logo img {
+  flex: 1;
+}
+
+.contact-logo div {
+  margin-left: 1rem;
+  flex: 2;
+}
+
+.contact-list > .contact-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-list-item > span{
+  flex: 1;
+}
+
+.img-button {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: flex-start; /* new */
+}
+
+.img-button > img{
+  max-width: 90%;
+}
+
+.btn-grad {
+  border: none;
+  padding: 0.2rem 0rem;
+  font-size: 3.2vw;
+  font-weight: 600;
+  min-width: 29%;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   /* background-size: 100% auto; */
+   color: #171A23;            
+   /* box-shadow: 0 0 10px #eee; */
+   border-radius: 15px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */  
+   text-decoration: none;
+ }
+
+
+
+.all-contact span{
+  flex: 2.5;
+  background: -webkit-linear-gradient(90deg, #F3D88F, #F0BB75);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4vw;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.all-contact span > i{
+  font-size: 6.3vw;
+}
+
+.game-lists{
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.35rem;
+}
+
+.game-list {
+  padding: 0rem 0.55rem;
+}
+
+.game-image {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+
+.game-button {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.game-download-button {
+  padding-top: 5px;
+  display: flex;
+  gap : 10px
+}
+
+footer {
+  display: flex;
+
+}
+
+footer > div {
+  padding: 1rem 0rem;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(11,11,11,1) 50%, rgba(49,67,79,1) 100%);
+
+
+}
+
+.footer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
